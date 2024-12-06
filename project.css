@@ -1,0 +1,519 @@
+* {
+    margin: 0;
+}
+
+.home {
+    background-image: url(tm-astro-bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 720px;
+    width: 100%;
+    padding: 20px 20px;
+    box-sizing: border-box;
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* gap: 250px;  */
+}
+
+.heading {
+    height: 50px;
+    padding-top: 15px;
+    margin-left: 10px;
+    font-size: 40px;
+    color: whitesmoke;
+}
+
+.navbar{
+       display: flex;
+
+ 
+}
+.menu {
+    height: 80px;
+    /* width: 900px; */
+    display: flex;
+    gap: 30px;
+    position: relative;
+    /* top: 78%;  */
+    left: 340px;
+}
+
+.menu-item {
+    width: 200px;
+    display: flex;
+    align-items: center;
+    flex-direction: column-reverse;
+    color: whitesmoke;
+    font-size: 20px;
+    position: relative;
+}
+
+.menu-item .circle {
+    width: 14px;
+    height: 14px;
+    background-color: whitesmoke;
+    border-radius: 50%;
+    position: relative;
+    z-index: 1; /* Keep circle on top of line */
+    margin-bottom: 5px; /* Adds space between circle and line */
+}
+
+.menu-item a {
+    font-size: 26px;
+    text-decoration: none;
+    color: whitesmoke;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+/* White line passing through circles */
+.menu-item::before {
+    content: "";
+    position: absolute;
+    top: 83%; /* Centers the line vertically */
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: whitesmoke;
+    z-index: 0; 
+}
+
+.menu-itemc::before {
+    content: "";
+    position: absolute;
+    top: 83%; /* Centers the line vertically */
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: greenyellow;
+    z-index: 0; /* Keeps line behind circle */
+}
+
+.menu-itemc {
+    width: 200px;
+    display: flex;
+    align-items: center;
+    flex-direction: column-reverse;
+    color: whitesmoke;
+    font-size: 20px;
+    position: relative;
+}
+
+.menu-itemc .circlec {
+    width: 14px;
+    height: 14px;
+    background-color: greenyellow;
+    border-radius: 50%;
+    position: relative;
+    z-index: 1; /* Keep circle on top of line */
+    margin-bottom: 5px; /* Adds space between circle and line */
+}
+
+.menu-itemc a {
+    font-size: 26px;
+    text-decoration: none;
+    color: whitesmoke;
+    margin-top: 5px; 
+    margin-bottom: 10px;
+}
+
+.content {
+    margin-top: 40px;
+    margin-left: 50px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    /* gap: 30px; */
+}
+
+.line-section {
+    display: flex;
+    align-items: center;
+    /* gap: 10px; */
+    margin-bottom: 20px;
+    width: 50%; /* Ensures line section spans across */
+}
+
+.line-section .circle {
+    width: 15px;
+    height: 15px;
+    background-color: whitesmoke;
+    border-radius: 50%;
+}
+
+.line-section .line {
+    flex-grow: 1; /* Allows line to expand between circles */
+    /* height: 1px; */
+    background-color: whitesmoke;
+    border: 1px solid whitesmoke; /* Adds a border to make the line more visible */
+}
+
+
+/* Info Section with Text and Images */
+.info-section {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.text-content {
+    max-width: 400px;
+    color: whitesmoke;
+    margin-left: 70px;
+    background-color: rgba(0, 0, 0, 0.5); /* Black with 70% opacity */
+    padding: 20px;
+    border-radius: 5px;
+}
+
+
+.text-content h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.text-content p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.image-column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.image-column img {
+    width: 150px;
+    height: 130px;
+    border-radius: 5px;
+}
+
+.button {
+    /* display: flex;
+    justify-content: center; */ */
+    /* margin-top: 20px; 
+    /* margin-left: 20%;
+}
+
+.button button {
+    background-color: whitesmoke; /* Green background */
+    color: black;
+    border: none;
+    padding: 15px 25px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 1px; /* Rounded corners */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* .button button:hover {
+    background-color: #45a049;
+    transform: scale(1.05); 
+}
+
+.button button:active {
+    transform: scale(0.95);
+} */
+
+/* Footer Styling */
+.footer {
+    /* background-color: #222; */
+    color: #fff; /* Text color */
+    margin-top: 40px;
+    padding: 20px;
+    /* text-align: center; */
+    position: relative;
+    font-family: Arial, sans-serif;
+}
+
+/* Text inside footer */
+.footer-text {
+    font-size: 14px;
+    font-weight: bold;
+    position: relative;
+}
+
+/* Zigzag border on top of footer */
+.footer::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    /* background: linear-gradient(135deg, #222 25%, transparent 25%) -10px 10px,
+                linear-gradient(225deg, #222 25%, transparent 25%) -10px 10px,
+                linear-gradient(315deg, #222 25%, transparent 25%),
+                linear-gradient(45deg, #222 25%, transparent 25%); */
+    background-size: 20px 20px;
+}
+
+/* Year Styling */
+.year {
+    color: #FFD700; /* Gold color for the year */
+}
+
+
+.gallary{
+    background-image: url('./tm-astro-bg.jpg'); /* Ensure the path is correct */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 720px;
+    width: 100%;
+    padding: 20px 20px;
+    box-sizing: border-box; 
+}
+
+.line-section2 {
+    display: flex;
+    align-items: center;
+    /* gap: 10px; */
+    margin-bottom: 20px;
+    width: 94%; /* Ensures line section spans across */
+}
+
+.line-section2 .circle2 {
+    width: 15px;
+    height: 15px;
+    background-color: whitesmoke;
+    border-radius: 50%;
+}
+
+.line-section2 .line2 {
+    flex-grow: 1; /* Allows line to expand between circles */
+    /* height: 1px; */
+    background-color: whitesmoke;
+    border: 1px solid whitesmoke; /* Adds a border to make the line more visible */
+}
+
+.gallaryimg {
+    margin-top: 40px;
+    /* margin-left: 10px; */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* gap: 30px; */
+}
+
+
+.img-section {
+    display: flex;
+    flex-wrap: wrap; /* Allows images to wrap to the next row if screen is too narrow */
+    gap: 20px; 
+    justify-content: space-around; 
+    padding-top: 20px;
+}
+
+.img-section img {
+    width: calc(100% / 6 - 10px); /* Six images per row, with spacing */
+    height: auto;
+    max-width: 200px; 
+    border-radius: 5px; /* Optional: rounded corners */
+}
+
+
+.line-section3 {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    /* width: 94%;  */
+}
+
+.line-section3 .circleb {
+    width: 15px;
+    height: 15px;
+    background-color: rgb(72, 154, 187);
+    border-radius: 50%;
+}
+.line-section3 .circle3 {
+    width: 15px;
+    height: 15px;
+    background-color: whitesmoke;
+    border-radius: 50%;
+}
+
+.about{
+    background-image: url('./tm-astro-bg.jpg'); /* Ensure the path is correct */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 720px;
+    width: 100%;
+    padding: 20px 20px;
+    box-sizing: border-box;  
+}
+
+/* Info Section with Text and Images */
+.info-section2 {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.text-content2 {
+    max-width: 700px;
+    color: whitesmoke;
+    margin-right: 40px;
+    background-color: rgba(0, 0, 0, 0.3); /* Black with 70% opacity */
+    padding: 20px;
+    border-radius: 5px;
+}
+
+
+.text-content2 h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.text-content2 p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+.content2{
+   
+        margin-top: 70px;
+        margin-right: 90px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        /* gap: 30px; */
+ 
+}
+
+/* Add margin specifically to the second paragraph */
+.text-content2 p:nth-of-type(2) {
+    margin-top: 15px; /* Space between first and second paragraph */
+}
+
+.line-section4 {
+    display: flex;
+    align-items: center;
+    /* gap: 20px; */
+    /* margin-top: 40px; */
+    margin-bottom: 20px;
+    width: 60%; 
+}
+
+
+.line-section4 .circle4 {
+    width: 15px;
+    height: 15px;
+    background-color: whitesmoke;
+    border-radius: 50%;
+}
+
+.line-section4 .line4 {
+    flex-grow: 1; /* Allows line to expand between circles */
+    /* height: 1px; */
+    background-color: whitesmoke;
+    border: 1px solid whitesmoke; /* Adds a border to make the line more visible */
+}
+
+.contact{
+    background-image: url('./tm-astro-bg.jpg'); /* Ensure the path is correct */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 720px;
+    width: 100%;
+    padding: 20px 20px;
+    box-sizing: border-box;  
+}
+
+
+.contact-info {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    color: whitesmoke;
+    margin-left: 250px;
+    margin-top: 40px;
+}
+
+.contact-form,
+.company-info {
+    width: 35%;
+    padding: 20px;
+    /* background-color: rgba(0, 0, 0, 0.7); */
+    border-radius: 8px;
+}
+
+.contact-form h3,
+.company-info h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid whitesmoke;
+    color: whitesmoke;
+    padding: 10px 5px;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.contact-form textarea {
+    height: 100px;
+    resize: none;
+}
+
+.contact-form button {
+    padding: 10px 20px;
+    background-color: whitesmoke;
+    color: black;
+    border: none;
+    margin-left: 350px;
+    /* border-radius: 5px; */
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.company-info p,
+.contact-details p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 10px 0;
+}
+
+.company-info iframe {
+    width: 100%;
+    /* height: 200px; */
+    border: none;
+    /* border-radius: 8px; */
+    margin-top: 15px;
+}
+
+
+.footer2 {
+    /* background-color: #222; */
+    color: #fff; /* Text color */
+    margin-top: 80px;
+    padding: 20px;
+    /* text-align: center; */
+    position: relative;
+    font-family: Arial, sans-serif;
+}
+
+
+.menu-item .circlec {
+    width: 14px;
+    height: 14px;
+    background-color: greenyellow;
+    /* color: yellowgreen; */
+    border-radius: 50%;
+    position: relative;
+    z-index: 1; /* Keep circle on top of line */
+    margin-bottom: 5px; /* Adds space between circle and line */
+}
